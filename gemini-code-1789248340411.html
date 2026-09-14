@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRD Paradigm Rosetta Stone & Clinical Masterclass — The Neuroscience Center</title>
+    <style>
+        /* CSS Reset & Base Styles */
+        *, ::before, ::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Utility Classes */
+        .max-w-7xl { max-width: 80rem; margin: 0 auto; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-xl { max-width: 36rem; }
+        .max-w-sm { max-width: 24rem; }
+        
+        .p-1 { padding: 0.25rem; }
+        .p-1-5 { padding: 0.375rem; }
+        .p-2 { padding: 0.5rem; }
+        .p-2-5 { padding: 0.625rem; }
+        .p-3 { padding: 0.75rem; }
+        .p-3-5 { padding: 0.875rem; }
+        .p-4 { padding: 1rem; }
+        .p-5 { padding: 1.25rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+
+        .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .px-2-5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-3-5 { padding-left: 0.875rem; padding-right: 0.875rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+
+        .py-0-5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-1-5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-2-5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+
+        .pt-1 { padding-top: 0.25rem; }
+        .pt-2 { padding-top: 0.5rem; }
+        .pt-4 { padding-top: 1rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pb-2 { padding-bottom: 0.5rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .pb-6 { padding-bottom: 1.5rem; }
+        .pb-8 { padding-bottom: 2rem; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mt-1 { margin-top: 0.25rem; }
+
+        /* Flex & Grid Layouts */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .flex-1 { flex: 1 1 0%; }
+        .flex-grow { flex-grow: 1; }
+
+        .grid { display: grid; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+
+        @media (min-width: 640px) {
+            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .sm\:flex-row { flex-direction: row; }
+            .sm\:items-center { align-items: center; }
+            .sm\:self-auto { align-self: auto; }
+            .sm\:p-8 { padding: 2rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:w-auto { width: auto; }
+            .md\:flex-none { flex: none; }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+            .lg\:col-span-5 { grid-column: span 5 / span 5; }
+            .lg\:col-span-7 { grid-column: span 7 / span 7; }
+        }
+
+        /* Glass Panel & Card Components */
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .z-50 { z-index: 50; }
+        .z-10 { z-index: 10; }
+        .relative { position: relative; }
+        .hidden { display: none !important; }
+        .block { display: block; }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+
+        .rounded { border-radius: 0.25rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .rounded-full { border-radius: 9999px; }
+
+        .border { border-width: 1px; border-style: solid; }
+        .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+        .border-t { border-top-width: 1px; border-top-style: solid; }
+        .border-r { border-right-width: 1px; border-right-style: solid; }
+
+        .border-slate-200 { border-color: #e2e8f0; }
+        .border-slate-300 { border-color: #cbd5e1; }
+        .border-slate-700 { border-color: #334155; }
+        .border-slate-800 { border-color: #1e293b; }
+        .border-teal-400-30 { border-color: rgba(45, 212, 191, 0.3); }
+        .border-teal-500-20 { border-color: rgba(20, 184, 166, 0.2); }
+        .border-teal-500-30 { border-color: rgba(20, 184, 166, 0.3); }
+        .border-teal-500-40 { border-color: rgba(20, 184, 166, 0.4); }
+        .border-amber-500-20 { border-color: rgba(245, 158, 11, 0.2); }
+        .border-amber-500-30 { border-color: rgba(245, 158, 11, 0.3); }
+        .border-emerald-500-30 { border-color: rgba(16, 185, 129, 0.3); }
+        .border-indigo-500-30 { border-color: rgba(99, 102, 241, 0.3); }
+
+        .bg-slate-50 { background-color: #f8fafc; }
+        .bg-slate-100 { background-color: #f1f5f9; }
+        .bg-slate-800 { background-color: #1e293b; }
+        .bg-slate-900 { background-color: #0f172a; }
+        .bg-slate-950 { background-color: #020617; }
+        .bg-white { background-color: #ffffff; }
+        .bg-teal-500 { background-color: #14b8a6; }
+        .bg-amber-500 { background-color: #f59e0b; }
+        
+        .bg-slate-800-80 { background-color: rgba(30, 41, 59, 0.8); }
+        .bg-slate-900-60 { background-color: rgba(15, 23, 42, 0.6); }
+        .bg-slate-900-80 { background-color: rgba(15, 23, 42, 0.8); }
+        .bg-slate-900-90 { background-color: rgba(15, 23, 42, 0.9); }
+        .bg-slate-950-60 { background-color: rgba(2, 6, 23, 0.6); }
+        .bg-slate-950-80 { background-color: rgba(2, 6, 23, 0.8); }
+        .bg-teal-500-20 { background-color: rgba(20, 184, 166, 0.2); }
+        .bg-teal-950-10 { background-color: rgba(4, 47, 46, 0.1); }
+        .bg-teal-950-20 { background-color: rgba(4, 47, 46, 0.2); }
+        .bg-teal-950-30 { background-color: rgba(4, 47, 46, 0.3); }
+        .bg-amber-950-20 { background-color: rgba(69, 26, 3, 0.2); }
+        .bg-amber-950-30 { background-color: rgba(69, 26, 3, 0.3); }
+        .bg-indigo-950-10 { background-color: rgba(30, 27, 75, 0.1); }
+        .bg-purple-950-10 { background-color: rgba(59, 7, 100, 0.1); }
+        .bg-orange-950-20 { background-color: rgba(67, 20, 7, 0.2); }
+        .bg-rose-950-10 { background-color: rgba(76, 5, 25, 0.1); }
+        .bg-blue-950-10 { background-color: rgba(23, 37, 84, 0.1); }
+        .bg-cyan-950-20 { background-color: rgba(8, 51, 68, 0.2); }
+        .bg-emerald-500-20 { background-color: rgba(16, 185, 129, 0.2); }
+        .bg-indigo-500-20 { background-color: rgba(99, 102, 241, 0.2); }
+
+        /* Typography */
+        .text-white { color: #ffffff; }
+        .text-slate-200 { color: #e2e8f0; }
+        .text-slate-300 { color: #cbd5e1; }
+        .text-slate-400 { color: #94a3b8; }
+        .text-slate-500 { color: #64748b; }
+        .text-slate-600 { color: #475569; }
+        .text-slate-700 { color: #334155; }
+        .text-slate-800 { color: #1e293b; }
+        .text-slate-900 { color: #0f172a; }
+        .text-slate-950 { color: #020617; }
+        
+        .text-teal-200 { color: #99f6e4; }
+        .text-teal-300 { color: #5eead4; }
+        .text-teal-400 { color: #2dd4bf; }
+        .text-teal-700 { color: #0f766e; }
+        .text-teal-800 { color: #115e59; }
+        .text-amber-300 { color: #fde047; }
+        .text-amber-400 { color: #fbbf24; }
+        .text-amber-800 { color: #92400e; }
+        .text-indigo-300 { color: #a5b4fc; }
+        .text-indigo-400 { color: #818cf8; }
+        .text-indigo-800 { color: #3730a3; }
+        .text-purple-400 { color: #c084fc; }
+        .text-orange-300 { color: #fdba74; }
+        .text-orange-400 { color: #fb923c; }
+        .text-rose-400 { color: #fb7185; }
+        .text-blue-400 { color: #60a5fa; }
+        .text-cyan-300 { color: #67e8f9; }
+        .text-emerald-300 { color: #6ee7b7; }
+        .text-emerald-800 { color: #065f46; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-10 { font-size: 10px; }
+        .text-11 { font-size: 11px; }
+
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+        .font-black { font-weight: 900; }
+        .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+
+        .uppercase { text-transform: uppercase; }
+        .italic { font-style: italic; }
+        .text-left { text-align: left; }
+        .text-center { text-align: center; }
+        .leading-tight { line-height: 1.25; }
+        .leading-snug { line-height: 1.375; }
+        .leading-relaxed { line-height: 1.625; }
+        .tracking-wide { letter-spacing: 0.025em; }
+        .tracking-wider { letter-spacing: 0.05em; }
+        .whitespace-nowrap { white-space: nowrap; }
+
+        /* Form Controls & Buttons */
+        button, select, input {
+            font-family: inherit;
+            color: inherit;
+            border: none;
+            outline: none;
+        }
+
+        button { cursor: pointer; }
+        
+        .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+
+        .transition { transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+        .transition-all { transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+        .transition-transform { transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .hover\:text-white:hover { color: #ffffff; }
+        .hover\:bg-slate-800:hover { background-color: #1e293b; }
+        .hover\:bg-teal-400:hover { background-color: #2dd4bf; }
+        .hover\:border-teal-500-50:hover { border-color: rgba(20, 184, 166, 0.5); }
+
+        /* Tables */
+        table { border-collapse: collapse; width: 100%; }
+        .overflow-x-auto { overflow-x: auto; }
+        
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.3); border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.6); }
+
+        /* Details / Summary Dropdowns */
+        details summary::-webkit-details-marker { display: none; }
+        details[open] .group-open\:rotate-180 { transform: rotate(180deg); }
+
+        /* Print Styles */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .bg-white { background-color: white !important; color: black !important; }
+            .text-slate-900 { color: black !important; }
+            .glass-panel { background: white !important; border: 1px solid #ccc !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header class="border-b border-slate-800 bg-slate-900-90 sticky top-0 z-50 backdrop-blur-md no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2-5 bg-teal-500-20 rounded-xl border border-teal-400-30 text-teal-300">
+                    <svg class="w-6 h-6" style="width:1.5rem; height:1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-white tracking-wide">The Neuroscience Center</h1>
+                    <p class="text-xs text-teal-300">TRD Subtyping Rosetta Stone &amp; Clinical Masterclass</p>
+                </div>
+            </div>
+
+            <!-- View Navigation Switcher Tabs -->
+            <nav class="flex bg-slate-800-80 p-1-5 rounded-xl border border-slate-700 overflow-x-auto max-w-full">
+                <button onclick="switchView('gentle')" id="btn-gentle" class="px-3-5 py-2 text-xs font-bold rounded-lg transition-all bg-teal-500 text-slate-950 shadow whitespace-nowrap">
+                    🌿 Gentle Patient Guide
+                </button>
+                <button onclick="switchView('questionnaire')" id="btn-questionnaire" class="px-3-5 py-2 text-xs font-bold rounded-lg transition-all text-slate-300 hover:text-white whitespace-nowrap">
+                    📝 Dual Questionnaire &amp; Radar
+                </button>
+                <button onclick="switchView('rosetta')" id="btn-rosetta" class="px-3-5 py-2 text-xs font-bold rounded-lg transition-all text-slate-300 hover:text-white whitespace-nowrap">
+                    📊 Scientific Rosetta Stone
+                </button>
+                <button onclick="switchView('evidence')" id="btn-evidence" class="px-3-5 py-2 text-xs font-bold rounded-lg transition-all text-slate-300 hover:text-white whitespace-nowrap">
+                    📚 Evidence &amp; Literature
+                </button>
+                <button onclick="switchView('roadmap')" id="btn-roadmap" class="px-3-5 py-2 text-xs font-bold rounded-lg transition-all text-slate-300 hover:text-white whitespace-nowrap">
+                    📋 Care Roadmap
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-8 space-y-8">
+
+        <!-- ========================================================= -->
+        <!-- VIEW 1: GENTLE PATIENT & FAMILY GUIDE                     -->
+        <!-- ========================================================= -->
+        <section id="view-gentle" class="space-y-6">
+            <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+                <div class="inline-block px-3 py-1 bg-teal-500-20 text-teal-300 border border-teal-400-30 rounded-full text-xs font-bold uppercase tracking-wider">
+                    Welcome to Clear, Personalized Answers
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                    Understanding Your Unique Brain Circuit Pattern
+                </h2>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-4xl">
+                    If standard antidepressants or talk therapy haven't given you full relief, it isn't a failure of effort or willpower. Modern neuroscience proves that depression stems from localized disruptions in specific brain circuits. Personality traits (like worry or low motivation) are often the enduring behavioral manifestations of these underlying brain firing patterns.
+                </p>
+            </div>
+
+            <!-- Interventional-to-Integrative Synergy Banner -->
+            <div class="glass-panel p-6 rounded-2xl border border-teal-500-40 bg-slate-900-90 space-y-3">
+                <div class="flex items-center space-x-2 text-teal-300 font-bold text-xs uppercase tracking-wider">
+                    <span>⚡ The Two-Step Neuro-Biological Breakthrough</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-extrabold text-white">
+                    Correcting Circuit Dysfunction with TMS &amp; Ketamine to Enable Integrative Care
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4 pt-1 text-xs text-slate-300 leading-relaxed">
+                    <div class="p-4 bg-teal-950-30 border border-teal-500-20 rounded-xl space-y-2">
+                        <span class="font-bold text-teal-300 uppercase tracking-wider block text-11">Step 1: Biological Circuit Correction (TMS + Ketamine)</span>
+                        <p>
+                            When a neural circuit is locked in refractory failure, talk therapy, lifestyle changes, and supplements hit a biological wall. Combination TMS and Ketamine therapy corrects this root dysfunction: Ketamine triggers rapid synaptogenesis (opening a 48–72 hour neuroplasticity window), while 1 Hz Fz TMS acts as an architectural guide to calm hyperactive threat loops or rebuild working memory connectivity.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-amber-950-20 border border-amber-500-20 rounded-xl space-y-2">
+                        <span class="font-bold text-amber-300 uppercase tracking-wider block text-11">Step 2: Receptivity to Modern Integrative Psychiatry</span>
+                        <p>
+                            With the underlying circuit desynchronization repaired, the patient is biologically freed from refractory resistance. This enables the brain to absorb and respond to modern integrative psychiatry—including psychotherapy, naturopathic supplementation, circadian tuning, and lifestyle habits—for sustained long-term wellness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pattern Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-6" id="gentle-pattern-cards"></div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- VIEW 2: DUAL QUESTIONNAIRE & RADAR ANALYSIS               -->
+        <!-- ========================================================= -->
+        <section id="view-questionnaire" class="space-y-8 hidden">
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h2 class="text-xl font-extrabold text-white">Dual Intake Questionnaire &amp; Score Alignment</h2>
+                        <p class="text-xs text-slate-400 mt-1">Rate behaviors over the past 3–6 months on a scale of 0 (Never) to 3 (Constantly).</p>
+                    </div>
+                    <!-- Evaluator Switcher -->
+                    <div class="flex bg-slate-900 p-1 rounded-xl border border-slate-800 w-full md:w-auto">
+                        <button id="mode-patient-btn" onclick="setQuestionnaireMode('patient')" class="flex-1 md:flex-none px-4 py-2 text-xs font-bold rounded-lg transition bg-teal-500 text-slate-950 shadow">
+                            👤 Patient Assessment
+                        </button>
+                        <button id="mode-informant-btn" onclick="setQuestionnaireMode('informant')" class="flex-1 md:flex-none px-4 py-2 text-xs font-bold rounded-lg transition text-slate-300 hover:text-white">
+                            👥 Informant Assessment
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Informant Meta Input Box -->
+                <div id="informant-info-box" class="hidden bg-amber-950-30 border border-amber-500-30 p-4 rounded-xl space-y-3">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase tracking-wider mb-1">Informant Name</label>
+                            <input type="text" id="informant-name" placeholder="e.g., Sarah Smith" class="w-full text-xs p-2-5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-300 uppercase tracking-wider mb-1">Relationship to Patient</label>
+                            <input type="text" id="informant-rel" placeholder="e.g., Spouse, Parent, Clinician" class="w-full text-xs p-2-5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Question Cards Wrapper -->
+            <div id="questions-wrapper" class="space-y-6"></div>
+
+            <!-- Scoring Radar & Alignment Dashboard -->
+            <div class="grid lg:grid-cols-12 gap-8 pt-4">
+                <div class="lg:col-span-5 glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="text-base font-bold text-white mb-1">Biotype Score Radar Comparison</h3>
+                        <p class="text-xs text-slate-400 mb-4">Patient Self-Report (Teal) vs. Informant Observation (Amber)</p>
+                        <div class="relative w-full aspect-square max-w-sm mx-auto flex items-center justify-center bg-slate-900-60 rounded-xl border border-slate-800 p-4">
+                            <!-- Pure Canvas / SVG Radar Visualization -->
+                            <canvas id="biotypeRadarCanvas" width="300" height="300" style="max-width: 100%; height: auto;"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex justify-center space-x-6 text-xs pt-2 border-t border-slate-800" style="gap: 1.5rem;">
+                        <span class="flex items-center text-teal-400 font-bold" style="gap: 0.5rem;">
+                            <span style="width: 0.75rem; height: 0.75rem; border-radius: 9999px; background-color: #2dd4bf; display: inline-block;"></span>
+                            <span>Patient Profile</span>
+                        </span>
+                        <span class="flex items-center text-amber-400 font-bold" style="gap: 0.5rem;">
+                            <span style="width: 0.75rem; height: 0.75rem; border-radius: 9999px; background-color: #fbbf24; display: inline-block;"></span>
+                            <span>Informant Profile</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-6">
+                    <div>
+                        <h3 class="text-base font-bold text-white mb-1">Clinical Alignment &amp; Pattern Analysis</h3>
+                        <p class="text-xs text-slate-400 mb-4">Automated concordance matching and discrepancy flags.</p>
+                        <div id="alignment-summary-cards" class="grid sm:grid-cols-2 gap-4"></div>
+                    </div>
+
+                    <div id="alignment-interpretation-box" class="p-4 rounded-xl text-xs leading-relaxed border border-slate-800 bg-slate-900-80">
+                        <p class="text-slate-400 italic">Complete the questionnaire to view automated score alignment and clinical analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- VIEW 3: SCIENTIFIC ROSETTA STONE MATRIX                   -->
+        <!-- ========================================================= -->
+        <section id="view-rosetta" class="space-y-6 hidden">
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-3">
+                <div class="flex justify-between items-start flex-wrap gap-4">
+                    <div>
+                        <h2 class="text-xl font-extrabold text-white">The Multi-Paradigm Scientific Crosswalk Grid</h2>
+                        <p class="text-xs text-slate-400 mt-1 max-w-3xl leading-relaxed">
+                            Cross-referencing Salvadore, Pizzagalli Models #1 &amp; #2, Stanford fMRI Biotypes (Williams 2017), Chinese LPA Cohort (2019), Cloninger TCI Temperament/Character, Immuno-Metabolic Axis (BBI 2025), and DSM-5 Phenotypes across 4 primary core neural domains.
+                        </p>
+                    </div>
+                    <!-- Quick Filter -->
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Domain Filter:</span>
+                        <select onchange="filterMatrixDomain(this.value)" class="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-lg p-2">
+                            <option value="all">Show All Domains</option>
+                            <option value="cognitive">1. Executive &amp; Cognitive Control</option>
+                            <option value="salience">2. Threat &amp; Negative Affect</option>
+                            <option value="reward">3. Reward &amp; Anhedonia</option>
+                            <option value="somatic">4. Somatic &amp; Biological</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Matrix Table -->
+            <div class="overflow-x-auto rounded-2xl border border-slate-800 glass-panel shadow-2xl custom-scrollbar">
+                <table>
+                    <thead>
+                        <tr class="bg-slate-900-90 text-slate-300 border-b border-slate-800 font-bold tracking-wider uppercase text-11">
+                            <th class="p-4 bg-slate-900 sticky left-0 z-10 border-r border-slate-800" style="min-width: 180px;">Core Neural Domain &amp; Stratification Task</th>
+                            <th class="p-4 text-teal-400" style="min-width: 210px;">1. Salvadore Model (2010)</th>
+                            <th class="p-4 text-indigo-400" style="min-width: 210px;">2. Pizzagalli Models #1 &amp; #2</th>
+                            <th class="p-4 text-purple-400" style="min-width: 210px;">3. Stanford fMRI Model</th>
+                            <th class="p-4 text-amber-400" style="min-width: 200px;">4. Chinese LPA Model</th>
+                            <th class="p-4 text-orange-400" style="min-width: 200px;">5. Cloninger TCI Temperament</th>
+                            <th class="p-4 text-rose-400" style="min-width: 210px;">6. Immuno-Metabolic (BBI 2025)</th>
+                            <th class="p-4 text-teal-300" style="min-width: 220px;">7. Integrative Interventions</th>
+                            <th class="p-4 text-blue-400" style="min-width: 180px;">8. DSM-5 Phenotype</th>
+                            <th class="p-4 text-cyan-300" style="min-width: 180px;">Target Rescue Goal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matrix-table-body" class="text-slate-300"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- VIEW 4: SCIENTIFIC EVIDENCE & LITERATURE REGISTRY        -->
+        <!-- ========================================================= -->
+        <section id="view-evidence" class="space-y-6 hidden">
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-2">
+                <h2 class="text-xl font-extrabold text-white">Foundational Scientific References &amp; Article Request Portal</h2>
+                <p class="text-xs text-slate-400">Peer-reviewed literature validating neurobehavioral biotyping, Cloninger TCI personality crosswalks, task stratification, and combination TMS/Ketamine therapy.</p>
+            </div>
+
+            <div class="grid gap-4" id="evidence-cards-container"></div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- VIEW 5: PRINTABLE CARE & SUPPORT ROADMAP                  -->
+        <!-- ========================================================= -->
+        <section id="view-roadmap" class="space-y-6 hidden">
+            <div class="bg-white text-slate-900 rounded-2xl p-8 space-y-6 border border-slate-200 shadow-2xl">
+                <!-- Header Controls -->
+                <div class="flex justify-between items-center border-b border-slate-200 pb-6 no-print">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Patient &amp; Family Care Roadmap</h2>
+                        <p class="text-xs text-slate-500">Integrated intake summary, family commitments, and integrative care plan.</p>
+                    </div>
+                    <button onclick="window.print()" class="px-5 py-2-5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs transition flex items-center space-x-2">
+                        <span>🖨️ Print / Export Summary</span>
+                    </button>
+                </div>
+
+                <div class="text-center space-y-1 pb-4 border-b border-slate-200">
+                    <h1 class="text-xl font-black uppercase tracking-wider text-slate-900">The Neuroscience Center</h1>
+                    <p class="text-xs text-slate-600">Precision Interventional Psychiatry &amp; Neurobehavioral Biotyping</p>
+                </div>
+
+                <!-- Roadmap Metadata -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs">
+                    <div>
+                        <span class="font-bold text-slate-500 block uppercase">Date:</span>
+                        <span id="roadmap-date" class="font-semibold text-slate-800"></span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-500 block uppercase">Informant:</span>
+                        <span id="roadmap-informant-name" class="font-semibold text-slate-800">Not Specified</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-500 block uppercase">Relationship:</span>
+                        <span id="roadmap-informant-rel" class="font-semibold text-slate-800">Not Specified</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-500 block uppercase">Dominant Target:</span>
+                        <span id="roadmap-primary-biotype" class="font-semibold text-teal-700">None Identified</span>
+                    </div>
+                </div>
+
+                <!-- Roadmap Scores Breakdown Table -->
+                <div class="space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Biotype Score Summary &amp; Cloninger TCI Crosswalk</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs border-collapse">
+                            <thead>
+                                <tr class="bg-slate-100 border-b border-slate-200 text-slate-700 font-bold">
+                                    <th class="p-3">Neurobehavioral Biotype</th>
+                                    <th class="p-3 text-center">Patient Score (0-9)</th>
+                                    <th class="p-3 text-center">Informant Score (0-9)</th>
+                                    <th class="p-3">Cloninger TCI Alignment</th>
+                                    <th class="p-3">Primary Actionable Support Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-800">
+                                <tr class="border-b border-slate-200">
+                                    <td class="p-3 font-semibold">1. Cognitive Dyscontrol (CCN)</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-p1">0/9</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-i1">0/9</td>
+                                    <td class="p-3 text-slate-600 font-medium">Low Persistence (PS) / Low Self-Directedness</td>
+                                    <td class="p-3 text-slate-600">Scaffold task planning; offer single-step guidance</td>
+                                </tr>
+                                <tr class="border-b border-slate-200">
+                                    <td class="p-3 font-semibold">2. Negative Affect Loop (Salience)</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-p2">0/9</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-i2">0/9</td>
+                                    <td class="p-3 text-slate-600 font-medium">High Harm Avoidance (HA1: Worry / HA2: Uncertainty)</td>
+                                    <td class="p-3 text-slate-600">De-escalate stress; provide calm, neutral grounding</td>
+                                </tr>
+                                <tr class="border-b border-slate-200">
+                                    <td class="p-3 font-semibold">3. Anhedonia / Reward Blunt</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-p3">0/9</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-i3">0/9</td>
+                                    <td class="p-3 text-slate-600 font-medium">Low Novelty Seeking (NS) &amp; Low Reward Dependence</td>
+                                    <td class="p-3 text-slate-600">Low-demand participation; remove pressure for joy</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-semibold">4. Central Executive Atrophy</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-p4">0/9</td>
+                                    <td class="p-3 text-center font-bold" id="score-roadmap-i4">0/9</td>
+                                    <td class="p-3 text-slate-600 font-medium">Low Persistence (PS) + High Asthenic Fatigue (HA4)</td>
+                                    <td class="p-3 text-slate-600">Pace cognitive energy; enforce mandatory rest breaks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Integrative Care Plan Checklist Section -->
+                <div class="space-y-3 pt-2">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Integrative Pharmacological &amp; Naturopathic Care Checklist</h3>
+                    <div class="grid sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                            <span class="font-bold text-teal-800 uppercase tracking-wider block text-10">Cognitive Control Support</span>
+                            <p class="text-slate-600">Modafinil / Guanfacine / Memantine consideration + Citicoline 500mg daily &amp; Bacopa monnieri extract.</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                            <span class="font-bold text-indigo-800 uppercase tracking-wider block text-10">Salience &amp; Threat Calming</span>
+                            <p class="text-slate-600">Low-dose non-SSRI anxiolytic tuning + Standardized Saffron (30mg) &amp; Magnesium L-Threonate.</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                            <span class="font-bold text-amber-800 uppercase tracking-wider block text-10">Reward &amp; Dopamine Reactivation</span>
+                            <p class="text-slate-600">Bupropion / Pramipexole / LDN consideration + L-Tyrosine (500mg) &amp; Rhodiola rosea.</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                            <span class="font-bold text-emerald-800 uppercase tracking-wider block text-10">Executive Stamina &amp; Bioenergetics</span>
+                            <p class="text-slate-600">IV NAD+ Infusion therapy / Stimulant tuning + Lion's Mane, Creatine 5g, &amp; CoQ10/PQQ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Support Commitments -->
+                <div class="space-y-3 pt-2">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Agreed Support Commitments</h3>
+                    <div id="roadmap-action-list" class="space-y-2 text-xs">
+                        <p class="text-slate-400 italic">No elevated scores detected. Complete questionnaire to populate commitments.</p>
+                    </div>
+                </div>
+
+                <!-- Signatures -->
+                <div class="pt-8 border-t border-slate-200 grid grid-cols-2 gap-8 text-xs">
+                    <div>
+                        <div class="border-b border-slate-300 pb-8 mb-1"></div>
+                        <p class="font-bold text-slate-700">Patient / Loved One Signature</p>
+                    </div>
+                    <div>
+                        <div class="border-b border-slate-300 pb-8 mb-1"></div>
+                        <p class="font-bold text-slate-700">The Neuroscience Center Clinician</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Data Definitions
+        const patternData = {
+            cognitive: {
+                title: '1. Brain Fog & Task Overwhelm',
+                circuit: 'Cognitive Control Network (CCN: dlPFC / dACC)',
+                cloninger: 'Cloninger TCI Trait: Low Persistence (PS) & Low Self-Directedness (SD)',
+                layman: 'Your brain\'s working memory and task-planning hub is experiencing a temporary structural slowdown. In Cloninger\'s personality model, this presents as Low Persistence—an inability to maintain effort under stress or fatigue.',
+                synergy: 'TMS/Ketamine Correction: Concurrent 1 Hz Fz TMS + Ketamine triggers dlPFC synaptogenesis, unlocking processing speed so the patient can engage with executive coaching and structured therapy.',
+                medication: 'Prescription Options: Modafinil / Armodafinil, Guanfacine (prefrontal alpha-2A tuning), Procognitive Vortioxetine, Memantine.',
+                naturopathic: 'Naturopathic Support: Citicoline (CDP-Choline), Bacopa Monnieri, L-Theanine + Caffeine stacking, High-DHA Omega-3s.',
+                forPatient: 'Break tasks into single, manageable micro-steps. Rely on visual checklists or single reminders rather than keeping plans in your head.',
+                forFamily: 'Avoid giving multi-step instructions or asking for sudden complex decisions. Offer one concrete, gentle step at a time.'
+            },
+            salience: {
+                title: '2. Worry & Critical Thought Loops',
+                circuit: 'Threat & Alarm Circuit (Salience Network / sgACC / Amygdala)',
+                cloninger: 'Cloninger TCI Trait: High Harm Avoidance (HA1: Worry / HA2: Uncertainty)',
+                layman: 'The brain\'s alarm system is locked on "high alert." In Cloninger\'s framework, this maps directly to High Harm Avoidance—pessimistic anticipation, fear of uncertainty, and automatic threat reactivity.',
+                synergy: 'TMS/Ketamine Correction: Midline 1 Hz TMS calms sgACC hyperactivity while Ketamine interrupts automated rumination, allowing mindfulness and integrative therapies to finally take root.',
+                medication: 'Prescription Options: Low-dose Ketamine maintenance, Gabapentin/Pregabalin, Prazosin (central sympathetic blunter), Buspirone.',
+                naturopathic: 'Naturopathic Support: Standardized Saffron Extract (30mg), Ashwagandha KSM-66, Silexan (Lavender Oil), Magnesium L-Threonate.',
+                forPatient: 'Practice grounding exercises (deep breathing, stepping outside) when thought loops start. Remind yourself that your internal alarm is hyper-sensitive right now.',
+                forFamily: 'Provide calm, neutral reassurance. Avoid arguing with negative interpretations; validate feelings while keeping the atmosphere quiet and safe.'
+            },
+            reward: {
+                title: '3. Feeling Numb & Loss of Joy (Anhedonia)',
+                circuit: 'Reward & Dopamine Circuit (Ventral Striatum / NAcc)',
+                cloninger: 'Cloninger TCI Trait: Low Novelty Seeking (NS1: Rigidity) & Low Reward Dependence (RD)',
+                layman: 'The dopamine signaling system responsible for pleasure and motivation has flatlined. Clinically, this manifests as Low Novelty Seeking—total absence of exploratory drive, indifference to positive events, and emotional flatness.',
+                synergy: 'TMS/Ketamine Correction: Reactivates mesolimbic dopamine signaling and striatal plasticity, restoring basic pleasure capacity so behavioral activation and lifestyle restoration can succeed.',
+                medication: 'Prescription Options: Bupropion (NDRI), Pramipexole (D3 dopamine agonist), Low-Dose Naltrexone (LDN 1.5–4.5mg), Transdermal Selegiline.',
+                naturopathic: 'Naturopathic Support: L-Tyrosine / NALT, Mucuna Pruriens (L-DOPA), Rhodiola Rosea, Acetyl-L-Carnitine (ALCAR), Bio-Curcumin.',
+                forPatient: 'Focus on simple completion rather than trying to force excitement. Take micro-actions (like a 2-minute walk) without expecting immediate joy.',
+                forFamily: 'Invite them to low-demand, quiet activities. Do not pressure them to display enthusiasm or cheerfulness—allow them to just be present.'
+            },
+            somatic: {
+                title: '4. Mental Exhaustion & Heavy Fatigue',
+                circuit: 'Executive Attention Network (Frontoparietal / Superior Parietal)',
+                cloninger: 'Cloninger TCI Trait: Low Persistence (PS) + High Asthenic Fatigue (HA4)',
+                layman: 'The sustained attention network burns through mental energy extremely quickly. This maps to Cloninger\'s Asthenia/Fatigability scale—routine cognitive work causes rapid exhaustion, mislabeled as "unmotivated."',
+                synergy: 'TMS/Ketamine Correction: Restores sustained cortical firing and bioenergetic efficiency, building cognitive stamina so naturopathic and bio-regulatory protocols can rebuild overall energy.',
+                medication: 'Prescription Options: CNS Stimulants (Methylphenidate), Atomoxetine, Viloxazine, IV NAD+ Infusions.',
+                naturopathic: 'Naturopathic Support: Lion\'s Mane Mushroom (Hericium erinaceus), Creatine Monohydrate (5g/day), CoQ10 + PQQ, NR / NMN.',
+                forPatient: 'Treat your mental energy like a strict daily battery budget. Schedule mandatory quiet rest periods between activities before reaching total depletion.',
+                forFamily: 'Help manage daily logistics to save their cognitive energy. Recognize that mental fatigue is a real biological symptom, not a lack of effort.'
+            }
+        };
+
+        const matrixData = [
+            {
+                domain: '1. Executive & Cognitive Control',
+                task: 'N-back Task / WCST',
+                salvadore: 'Salvadore Model (2010): pgACC / dlPFC Desynchronization during N-back Task (Predicts Ketamine Response)',
+                pizzagalli: 'Pizzagalli Model #1 (2011): Executive Control Breakdown secondary to Frontocingulate Dysfunction',
+                stanford: 'Stanford Model (Williams 2017): Cognitive Control Hypoactivity (dlPFC / dACC Underactivity)',
+                chinese: 'Chinese LPA Model (2019): Severe TRD Class (~66% of cases; High Planning Deficits)',
+                cloninger: 'Cloninger TCI: Low Persistence (PS) & Low Self-Directedness (SD) — Goal abandonment under stress',
+                immuno: 'Bioenergetic / Central ATP Deficit & Cortical Glucose Hypometabolism',
+                interventions: 'Pharma: Modafinil, Guanfacine, Memantine | Naturopathic: Citicoline, Bacopa, L-Theanine',
+                dsm: 'DSM-5 Executive Impairment Subtype',
+                rescue: 'Circuit Synchronizer (Rebuilds structural network integrity)'
+            },
+            {
+                domain: '2. Threat & Negative Affect',
+                task: 'Emotional Stroop / ERT',
+                salvadore: 'Salvadore Model (2010): Amygdala-pgACC Connectivity Disconnect under Emotional Stress',
+                pizzagalli: 'Pizzagalli Model #1 (2011): Baseline rACC / sgACC Abnormalities Driving Negative Attentional Bias',
+                stanford: 'Stanford Model (Williams 2017): Salience Network Hyperactivity & DMN Hyperconnectivity',
+                chinese: 'Chinese LPA Model (2019): Moderate TRD w/ Co-Morbid Anxiety (~9% of cases; Severe Panic/Rumination)',
+                cloninger: 'Cloninger TCI: High Harm Avoidance (HA1: Anticipatory Worry / HA2: Fear of Uncertainty)',
+                immuno: 'HPA Axis Cortisol Hyper-arousal & Downregulated Immune Coding Transcripts (BBI 2025)',
+                interventions: 'Pharma: Low-Dose Ketamine, Gabapentin, Prazosin | Naturopathic: Saffron, Ashwagandha, Silexan',
+                dsm: 'DSM-5 Anxious Depression Subtype',
+                rescue: 'Limbic Stabilizer (Down-regulates threat hyper-reactivity)'
+            },
+            {
+                domain: '3. Reward & Motivation (Anhedonia)',
+                task: 'Probabilistic Reward Task (PRT) / MID',
+                salvadore: 'Salvadore Model (2010): Sub-cortical Limbic Disconnect during Incentive Processing',
+                pizzagalli: 'Pizzagalli Model #2 (2013): Blunted Reward Responsiveness & Dopaminergic Deficit on PRT',
+                stanford: 'Stanford Model (Williams 2017): Reward Frontostriatal Hypoactivity (Ventral Striatum / NAcc Blunting)',
+                chinese: 'Chinese LPA Model (2019): Severe TRD Sub-Cluster (Profound Vegetative & Motivational Loss)',
+                cloninger: 'Cloninger TCI: Low Novelty Seeking (NS1: Rigidity) & Low Reward Dependence (RD)',
+                immuno: 'Inflammatory Sickness Axis (IL-6, TNF-alpha, hs-CRP > 3mg/L Blunting Dopamine Release)',
+                interventions: 'Pharma: Bupropion, Pramipexole, LDN | Naturopathic: L-Tyrosine, Rhodiola, ALCAR, Curcumin',
+                dsm: 'DSM-5 Melancholic Subtype (Loss of Pleasure & Lack of Reactivity)',
+                rescue: 'Striatal / Dopaminergic Rescuer (Reactivates cellular reward responsiveness)'
+            },
+            {
+                domain: '4. Executive Attention & Burnout',
+                task: 'Continuous Performance Task (CPT) / RVP',
+                salvadore: 'Salvadore Model (2010): Prefrontal Exhaustion during Sustained Working Memory Load',
+                pizzagalli: 'Pizzagalli Model #1 (2011): Sustained Cingulate Fatigue during Cognitive Battery',
+                stanford: 'Stanford Model (Williams 2017 / Hack et al. 2023): Inattentive Frontoparietal Cognitive Biotype',
+                chinese: 'Chinese LPA Model (2019): Mild/Mod TRD w/ Somatic Complaints & Fatigue (~25% of cases)',
+                cloninger: 'Cloninger TCI: Low Persistence (PS) + High Asthenia / Fatigability (HA4)',
+                immuno: 'Transcriptomic Immune Subtype (5,746 DEGs; Perera et al., BBI 2025)',
+                interventions: 'Pharma: Methylphenidate, Atomoxetine, IV NAD+ | Naturopathic: Lion\'s Mane, Creatine, CoQ10/PQQ',
+                dsm: 'DSM-5 Atypical Subtype (Leaden Paralysis & Mental Exhaustion)',
+                rescue: 'Executive Network Booster (Sustains long-range cortical firing)'
+            }
+        ];
+
+        const scientificReferences = [
+            {
+                model: "Cloninger Temperament & Character Model (1987, 1993)",
+                articleTitle: "A systematic method for clinical description and classification of personality variants",
+                citation: "Cloninger, C. R. (1987). A systematic method for clinical description and classification of personality variants. Archives of General Psychiatry, 44(6), 573-588. / Cloninger et al. (1993).",
+                doi: "10.1001/archpsyc.1987.01800180093014",
+                finding: "Pioneered the biological subtyping of personality through monoaminergic systems, establishing Harm Avoidance (Serotonin/Salience Loop), Novelty Seeking (Dopamine/Reward Loop), and Persistence (Noradrenaline/Prefrontal Loop) as enduring circuit traits."
+            },
+            {
+                model: "Salvadore Model (2010)",
+                articleTitle: "Anterior Cingulate Desynchronization and Functional Connectivity Predict Rapid Response to Ketamine",
+                citation: "Salvadore, G., et al. (2010). Anterior Cingulate Desynchronization and Functional Connectivity with the Amygdala During a Working Memory Task Predict Rapid Antidepressant Response to Ketamine. Neuropsychopharmacology, 35(7), 1415–1422.",
+                doi: "10.1038/npp.2010.14",
+                finding: "Proves that pgACC desynchronization during an N-back cognitive load serves as an objective biomarker predicting rapid, robust antidepressant response to NMDAR antagonists (ketamine)."
+            },
+            {
+                model: "Pizzagalli Model #1 (2011 - Threat & Negative Bias)",
+                articleTitle: "Frontocingulate Dysfunction in Depression: Toward Biomarkers of Treatment Response",
+                citation: "Pizzagalli, D. A. (2011). Frontocingulate Dysfunction in Depression: Toward Biomarkers of Treatment Response. Neuropsychopharmacology, 36(1), 183–206.",
+                doi: "10.1038/npp.2010.166",
+                finding: "Identifies baseline abnormalities in the rostral anterior cingulate cortex (rACC) as a key biomarker for treatment resistance, linking it to locked negative attentional bias loops on Emotional Stroop testing."
+            },
+            {
+                model: "Pizzagalli Model #2 (2013 - Anhedonia & PRT)",
+                articleTitle: "Blunted Reward Responsiveness in Remitted Depression",
+                citation: "Pizzagalli, D. A., et al. (2013). Blunted Reward Responsiveness in Remitted Depression. Journal of Psychiatric Research, 47(12), 1864–1869.",
+                doi: "10.1016/j.jpsychires.2013.08.014",
+                finding: "Establishes the Probabilistic Reward Task (PRT) as the gold standard for measuring blunted dopamine signaling and impaired reinforcement learning in patients who fail SSRIs."
+            },
+            {
+                model: "Stanford 6-Biotype fMRI Model (Williams 2017)",
+                articleTitle: "Defining biotypes for depression and anxiety based on large-scale circuit dysfunction",
+                citation: "Williams LM. Defining biotypes for depression and anxiety based on large-scale circuit dysfunction: a theoretical review of the evidence and future directions for clinical translation. Depress Anxiety. 2017 Jan;34(1):9-24.",
+                doi: "10.1002/da.22556",
+                finding: "Uses task-free and task-evoked fMRI to delineate 6 distinct biological biotypes (DMN, Cognitive Control, Salience, Reward, Inattentive, Intact) mapping directly to circuit-targeted therapeutics."
+            },
+            {
+                model: "JAMA Cognitive Biotype Model (Hack et al., 2023)",
+                articleTitle: "A Cognitive Biotype of Depression Linking Symptoms, Behavior Measures, Neural Circuits, and Differential Treatment Outcomes",
+                citation: "Hack, L. M., et al. (2023). A Cognitive Biotype of Depression Linking Symptoms, Behavior Measures, Neural Circuits, and Differential Treatment Outcomes. JAMA Network Open, 6(6):e2318411.",
+                doi: "10.1001/jamanetworkopen.2023.18411",
+                finding: "Proves that patients with distinct frontoparietal central executive network deficits show severe sustained attention failures on CPT testing and are refractory to standard monoaminergic drugs."
+            },
+            {
+                model: "Chinese Clinical Cohort LPA Model (2019)",
+                articleTitle: "Subtypes of treatment-resistant depression determined by a latent class analysis in a Chinese clinical population",
+                citation: "Subtypes of treatment-resistant depression determined by a latent class analysis in a Chinese clinical population. Journal of Affective Disorders (2019), 249: 82–89.",
+                doi: "10.1016/j.jad.2019.02.005",
+                finding: "Categorizes TRD into 3 distinct clinical profiles: Severe TRD (~66%), Moderate TRD w/ Co-Morbid Anxiety (~9%), and Mild/Mod TRD w/ Somatic Complaints (~25%)."
+            },
+            {
+                model: "Immuno-Transcriptomic TRD Molecular Subtype (BBI 2025)",
+                articleTitle: "Blood transcriptomic analysis reveals a distinct molecular subtype of treatment resistant depression",
+                citation: "Perera, J., et al. (2025). Blood transcriptomic analysis reveals a distinct molecular subtype of treatment resistant depression compared to non-treatment resistant depression. Brain, Behavior, and Immunity, 130, 106103.",
+                doi: "10.1016/j.bbi.2025.106103",
+                finding: "Demonstrates through whole-transcriptome sequencing (5,746 differentially expressed genes) that TRD represents a distinct molecular subtype characterized by unique immune system gene regulation and non-coding RNA epigenetic signatures."
+            },
+            {
+                model: "APA Practice Advisory on Combination Therapy (Cook, 2026)",
+                articleTitle: "Combining TMS and ketamine for treatment-resistant depression: Clinical rationale, current evidence, and practical guidance",
+                citation: "Cook, I. A. (2026). Combining TMS and ketamine for treatment-resistant depression: Clinical rationale, current evidence, and practical guidance. Focus, 24(3), 326–330.",
+                doi: "10.1176/appi.focus.20260012",
+                finding: "Affirms that combining TMS and ketamine is a biologically synergistic intervention for entrenched TRD, leveraging convergent effects on glutamatergic transmission, BDNF neuroplasticity, and frontolimbic network modulation."
+            }
+        ];
+
+        const biotypeQuestions = [
+            { id: 'q1', section: 0, text: "I get stuck or overwhelmed when trying to organize multi-step plans or simple daily logistics." },
+            { id: 'q2', section: 0, text: "I feel like my mental processing speed has physically slowed down." },
+            { id: 'q3', section: 0, text: "I start wellness or medical plans but drop out because I feel too cognitively overwhelmed." },
+            { id: 'q4', section: 1, text: "I am locked in self-critical or anxious thought loops that I simply cannot turn off." },
+            { id: 'q5', section: 1, text: "I automatically assume neutral situations (texts, comments, work emails) are negative or threatening." },
+            { id: 'q6', section: 1, text: "Therapy makes sense logically, but my body and emotions remain stuck in alarm mode." },
+            { id: 'q7', section: 2, text: "I feel completely flat inside, even when positive or happy things happen." },
+            { id: 'q8', section: 2, text: "I lack the internal 'spark' or motivation to start activities or hobbies I used to enjoy." },
+            { id: 'q9', section: 2, text: "Standard antidepressants haven't helped bring back my energy, joy, or motivation." },
+            { id: 'q10', section: 3, text: "Sustaining focus on tasks, reading, or conversations drains my energy almost instantly." },
+            { id: 'q11', section: 3, text: "I experience frequent, frustrating memory lapses or misplace basic items." },
+            { id: 'q12', section: 3, text: "I feel mentally exhausted long before the physical work day is over." }
+        ];
+
+        const informantTextOverrides = {
+            'q1': "They struggle to manage schedules, multi-step tasks, or complex decision-making.",
+            'q2': "They seem mentally 'stuck' or take much longer to process choices than they used to.",
+            'q3': "They abandon commitments, daily routines, or care plans prematurely due to overwhelm.",
+            'q4': "They frequently ruminate on bad experiences or repeatedly express severe worries.",
+            'q5': "They misinterpret neutral comments, tone, or situations as personal criticism or hostility.",
+            'q6': "Logical reassurance fails to calm their distress or lower their emotional guard.",
+            'q7': "They show emotional flatness or lack genuine enthusiasm during positive moments.",
+            'q8': "They have stopped initiating social contact, hobbies, or personal goals.",
+            'q9': "They operate out of rigid routine or obligation rather than genuine interest.",
+            'q10': "They tire rapidly during mental tasks, conversations, or focused work.",
+            'q11': "They exhibit noticeable forgetfulness, misplacing items or losing track of details.",
+            'q12': "They show or express profound mental burnout from standard daily routines."
+        };
+
+        const biotypeNames = [
+            "Cognitive Dyscontrol (CCN)",
+            "Negative Affect (Salience)",
+            "Anhedonia / Reward Blunt",
+            "Central Executive Atrophy"
+        ];
+
+        // State Variables
+        let activeMode = 'patient';
+        let patientAnswers = Array(12).fill(0);
+        let informantAnswers = Array(12).fill(0);
+
+        // View Switcher
+        function switchView(viewId) {
+            ['gentle', 'questionnaire', 'rosetta', 'evidence', 'roadmap'].forEach(v => {
+                const el = document.getElementById(`view-${v}`);
+                if (el) el.classList.add('hidden');
+                const btn = document.getElementById(`btn-${v}`);
+                if (btn) btn.className = "px-3-5 py-2 text-xs font-bold rounded-lg transition-all text-slate-300 hover:text-white whitespace-nowrap";
+            });
+
+            document.getElementById(`view-${viewId}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`btn-${viewId}`);
+            activeBtn.className = "px-3-5 py-2 text-xs font-bold rounded-lg transition-all bg-teal-500 text-slate-950 shadow whitespace-nowrap";
+
+            if (viewId === 'questionnaire') {
+                drawRadarCanvas();
+                renderAlignmentAnalysis();
+            } else if (viewId === 'roadmap') {
+                updateRoadmap();
+            }
+        }
+
+        // Render Gentle Pattern Cards
+        function renderGentleCards() {
+            const container = document.getElementById('gentle-pattern-cards');
+            container.innerHTML = '';
+
+            Object.keys(patternData).forEach(key => {
+                const item = patternData[key];
+                const card = document.createElement('div');
+                card.className = "glass-panel p-6 rounded-2xl border border-slate-800 space-y-4 hover:border-teal-500-50 transition flex flex-col justify-between";
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-lg font-bold text-teal-300">${item.title}</h3>
+                            <span class="px-2-5 py-1 bg-slate-800 border border-slate-700 rounded-lg text-10 font-bold text-slate-400 uppercase">${item.circuit}</span>
+                        </div>
+                        <div class="text-11 font-semibold text-amber-400 bg-amber-950-20 px-3 py-1 rounded-lg border border-amber-500-20">${item.cloninger}</div>
+                        <p class="text-xs text-slate-300 leading-relaxed bg-slate-900-60 p-3-5 rounded-xl border border-slate-800">${item.layman}</p>
+                        
+                        <div class="p-3 bg-teal-950-30 border border-teal-500-30 rounded-xl space-y-1">
+                            <span class="text-10 font-bold text-teal-400 uppercase tracking-wider">⚡ Circuit Reset $\\rightarrow$ Integrative Receptivity</span>
+                            <p class="text-11 text-teal-200 leading-snug">${item.synergy}</p>
+                        </div>
+
+                        <!-- Integrative Support Toolkit Drawer -->
+                        <details class="group bg-slate-900-80 border border-slate-700 rounded-xl overflow-hidden">
+                            <summary class="p-3 text-xs font-bold text-teal-300 cursor-pointer flex justify-between items-center bg-slate-800-80 hover:bg-slate-800 transition">
+                                <span>💊 &amp; 🌿 Integrative Support Toolkit (Medication &amp; Supplements)</span>
+                                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <div class="p-3-5 space-y-2 text-11 border-t border-slate-800 bg-slate-950-60">
+                                <div class="space-y-1">
+                                    <span class="font-bold text-teal-400 block">${item.medication.split(':')[0]}:</span>
+                                    <p class="text-slate-300">${item.medication.split(':')[1]}</p>
+                                </div>
+                                <div class="space-y-1 pt-1 border-t border-slate-800" style="border-color: rgba(30, 41, 59, 0.6);">
+                                    <span class="font-bold text-amber-400 block">${item.naturopathic.split(':')[0]}:</span>
+                                    <p class="text-slate-300">${item.naturopathic.split(':')[1]}</p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <div class="grid sm:grid-cols-2 gap-3 pt-1">
+                            <div class="p-3 bg-teal-950-20 border border-teal-500-20 rounded-xl space-y-1">
+                                <span class="text-10 font-bold text-teal-400 uppercase tracking-wider">For The Patient</span>
+                                <p class="text-11 text-slate-300 leading-snug">${item.forPatient}</p>
+                            </div>
+                            <div class="p-3 bg-slate-900-60 border border-slate-800 rounded-xl space-y-1">
+                                <span class="text-10 font-bold text-slate-400 uppercase tracking-wider">For Family &amp; Support</span>
+                                <p class="text-11 text-slate-300 leading-snug">${item.forFamily}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Render Matrix Table
+        function renderMatrixTable(filterDomain = 'all') {
+            const tbody = document.getElementById('matrix-table-body');
+            tbody.innerHTML = '';
+
+            matrixData.forEach((row, idx) => {
+                const domainKeys = ['cognitive', 'salience', 'reward', 'somatic'];
+                if (filterDomain !== 'all' && filterDomain !== domainKeys[idx]) return;
+
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-800 transition border-b border-slate-800";
+                tr.innerHTML = `
+                    <td class="p-4 font-bold bg-slate-900-90 text-teal-300 sticky left-0 border-r border-slate-800 space-y-1">
+                        <div class="text-xs">${row.domain}</div>
+                        <div class="text-10 text-slate-400 font-normal">Task: ${row.task}</div>
+                    </td>
+                    <td class="p-4 bg-teal-950-10 border-r border-slate-800 font-medium text-11 text-slate-200">${row.salvadore}</td>
+                    <td class="p-4 bg-indigo-950-10 border-r border-slate-800 font-medium text-11 text-slate-200">${row.pizzagalli}</td>
+                    <td class="p-4 bg-purple-950-10 border-r border-slate-800 font-medium text-11 text-slate-200">${row.stanford}</td>
+                    <td class="p-4 bg-amber-950-20 border-r border-slate-800 font-medium text-11 text-slate-200">${row.chinese}</td>
+                    <td class="p-4 bg-orange-950-20 border-r border-slate-800 font-bold text-11 text-orange-300">${row.cloninger}</td>
+                    <td class="p-4 bg-rose-950-10 border-r border-slate-800 font-medium text-11 text-slate-200">${row.immuno}</td>
+                    <td class="p-4 bg-teal-950-20 border-r border-slate-800 font-semibold text-11 text-teal-200">${row.interventions}</td>
+                    <td class="p-4 bg-blue-950-10 border-r border-slate-800 font-medium text-11 text-slate-200">${row.dsm}</td>
+                    <td class="p-4 bg-cyan-950-20 font-bold text-11 text-cyan-300">${row.rescue}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterMatrixDomain(val) {
+            renderMatrixTable(val);
+        }
+
+        function renderEvidenceCards() {
+            const container = document.getElementById('evidence-cards-container');
+            container.innerHTML = '';
+
+            scientificReferences.forEach((ref) => {
+                const card = document.createElement('div');
+                card.className = "glass-panel p-5 rounded-2xl border border-slate-800 space-y-3";
+                
+                const encTitle = encodeURIComponent(ref.articleTitle || ref.model);
+                const encCitation = encodeURIComponent(ref.citation);
+                const encDoi = encodeURIComponent(ref.doi || '');
+                const mailtoUrl = `mailto:info@neurosciencecenter.com?subject=Personal%20Use%20Copy%20Request%3A%20${encTitle}&body=Hello%20Clinical%20Team%2C%0A%0AI%20am%20requesting%20a%20personal%20use%20copy%20of%20the%20following%20scientific%20article%20for%20my%20research%2Fclinical%20care%20planning%3A%0A%0AArticle%3A%20${encTitle}%0ACitation%3A%20${encCitation}%0ADOI%3A%20${encDoi}%0A%0AThank%20you!`;
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <span class="px-2-5 py-1 bg-slate-800 border border-slate-700 rounded-lg text-10 font-bold text-teal-400 uppercase tracking-wider">${ref.model}</span>
+                        ${ref.doi ? `<span class="text-10 text-slate-400 font-mono">DOI: ${ref.doi}</span>` : ''}
+                    </div>
+                    
+                    <h4 class="text-xs font-bold text-white leading-snug">${ref.citation}</h4>
+                    
+                    <p class="text-xs text-slate-300 leading-relaxed bg-slate-900-60 p-3 rounded-xl border border-slate-800">${ref.finding}</p>
+
+                    <!-- Interactive Article Request Dropdown Drawer -->
+                    <details class="group bg-slate-900-90 border border-slate-700 rounded-xl overflow-hidden">
+                        <summary class="p-3 text-xs font-bold text-teal-300 cursor-pointer flex justify-between items-center bg-slate-800 hover:bg-slate-800 transition">
+                            <span class="flex items-center space-x-2">
+                                <span>📬 Contact us for a personal use copy of this article</span>
+                            </span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-3-5 space-y-3 text-11 border-t border-slate-800 bg-slate-950-80">
+                            <p class="text-slate-300 leading-relaxed">
+                                Under copyright fair-use exemptions for medical research and personal health education, our clinical library can provide a digital PDF copy of this publication upon request.
+                            </p>
+                            <a href="${mailtoUrl}" class="inline-flex items-center space-x-2 px-4 py-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold rounded-lg transition text-xs shadow-lg">
+                                <span>✉️ Push to Send Email Request to Clinic</span>
+                            </a>
+                        </div>
+                    </details>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Questionnaire Logic
+        function setQuestionnaireMode(mode) {
+            activeMode = mode;
+            const pBtn = document.getElementById('mode-patient-btn');
+            const iBtn = document.getElementById('mode-informant-btn');
+            const infoBox = document.getElementById('informant-info-box');
+
+            if (mode === 'patient') {
+                pBtn.className = "flex-1 md:flex-none px-4 py-2 text-xs font-bold rounded-lg transition bg-teal-500 text-slate-950 shadow";
+                iBtn.className = "flex-1 md:flex-none px-4 py-2 text-xs font-bold rounded-lg transition text-slate-300 hover:text-white";
+                infoBox.classList.add('hidden');
+            } else {
+                iBtn.className = "flex-1 md:flex-none px-4 py-2 text-xs font-bold rounded-lg transition bg-amber-500 text-slate-950 shadow";
+                pBtn.className = "flex-1 md:flex-none px-4 py-2 text-xs font-bold rounded-lg transition text-slate-300 hover:text-white";
+                infoBox.classList.remove('hidden');
+            }
+            renderQuestionnaire();
+        }
+
+        function renderQuestionnaire() {
+            const wrapper = document.getElementById('questions-wrapper');
+            wrapper.innerHTML = '';
+
+            let currentSec = -1;
+            const answers = activeMode === 'patient' ? patientAnswers : informantAnswers;
+
+            biotypeQuestions.forEach((q, idx) => {
+                if (q.section !== currentSec) {
+                    currentSec = q.section;
+                    const header = document.createElement('div');
+                    header.className = "pt-2 border-b border-slate-800 pb-2 flex justify-between items-center";
+                    header.innerHTML = `
+                        <h3 class="text-xs font-extrabold text-teal-400 uppercase tracking-wider">${biotypeNames[currentSec]}</h3>
+                        <span class="text-10 text-slate-500">Max 9 Points</span>
+                    `;
+                    wrapper.appendChild(header);
+                }
+
+                const questionText = activeMode === 'patient' ? q.text : informantTextOverrides[q.id];
+                const card = document.createElement('div');
+                card.className = "glass-panel p-4 rounded-xl border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4";
+                card.innerHTML = `
+                    <div class="space-y-1 max-w-xl">
+                        <span class="text-10 font-bold text-slate-500">Question ${idx + 1}</span>
+                        <p class="text-xs font-medium text-slate-200 leading-snug">${questionText}</p>
+                    </div>
+                    <div class="flex items-center space-x-1 sm:space-x-2 bg-slate-900 p-1-5 rounded-xl border border-slate-800 self-start sm:self-auto" style="gap: 0.25rem;">
+                        ${[0, 1, 2, 3].map(val => `
+                            <button onclick="setAnswer(${idx}, ${val})" class="px-3 py-1-5 text-xs font-bold rounded-lg transition ${answers[idx] === val ? (activeMode === 'patient' ? 'bg-teal-500 text-slate-950 shadow' : 'bg-amber-500 text-slate-950 shadow') : 'text-slate-400 hover:bg-slate-800'}">
+                                ${val}
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+                wrapper.appendChild(card);
+            });
+        }
+
+        function setAnswer(qIdx, val) {
+            if (activeMode === 'patient') {
+                patientAnswers[qIdx] = val;
+            } else {
+                informantAnswers[qIdx] = val;
+            }
+            renderQuestionnaire();
+            drawRadarCanvas();
+            renderAlignmentAnalysis();
+        }
+
+        function getTotals(answers) {
+            const totals = [0, 0, 0, 0];
+            biotypeQuestions.forEach((q, idx) => {
+                totals[q.section] += answers[idx];
+            });
+            return totals;
+        }
+
+        // Native HTML5 Canvas Radar Chart Renderer
+        function drawRadarCanvas() {
+            const canvas = document.getElementById('biotypeRadarCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const radius = 100;
+
+            ctx.clearRect(0, 0, width, height);
+
+            const labels = ['Cognitive', 'Salience', 'Reward', 'Executive'];
+            const pTotals = getTotals(patientAnswers);
+            const iTotals = getTotals(informantAnswers);
+            const numAxes = 4;
+
+            // Draw Web Grid
+            for (let level = 1; level <= 3; level++) {
+                ctx.beginPath();
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 1;
+                const r = (radius / 3) * level;
+                for (let i = 0; i < numAxes; i++) {
+                    const angle = (Math.PI / 2) * i - Math.PI / 2;
+                    const x = centerX + r * Math.cos(angle);
+                    const y = centerY + r * Math.sin(angle);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+                ctx.stroke();
+            }
+
+            // Draw Axes & Labels
+            for (let i = 0; i < numAxes; i++) {
+                const angle = (Math.PI / 2) * i - Math.PI / 2;
+                const x = centerX + radius * Math.cos(angle);
+                const y = centerY + radius * Math.sin(angle);
+
+                ctx.beginPath();
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+
+                // Draw Label
+                ctx.fillStyle = '#94a3b8';
+                ctx.font = 'bold 10px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                const lx = centerX + (radius + 20) * Math.cos(angle);
+                const ly = centerY + (radius + 20) * Math.sin(angle);
+                ctx.fillText(labels[i], lx, ly);
+            }
+
+            // Helper to draw dataset
+            function drawDataset(data, strokeColor, fillColor) {
+                ctx.beginPath();
+                for (let i = 0; i < numAxes; i++) {
+                    const angle = (Math.PI / 2) * i - Math.PI / 2;
+                    const valRatio = Math.min(data[i] / 9, 1);
+                    const x = centerX + radius * valRatio * Math.cos(angle);
+                    const y = centerY + radius * valRatio * Math.sin(angle);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+                ctx.fillStyle = fillColor;
+                ctx.fill();
+                ctx.strokeStyle = strokeColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Points
+                for (let i = 0; i < numAxes; i++) {
+                    const angle = (Math.PI / 2) * i - Math.PI / 2;
+                    const valRatio = Math.min(data[i] / 9, 1);
+                    const x = centerX + radius * valRatio * Math.cos(angle);
+                    const y = centerY + radius * valRatio * Math.sin(angle);
+                    ctx.beginPath();
+                    ctx.arc(x, y, 4, 0, Math.PI * 2);
+                    ctx.fillStyle = strokeColor;
+                    ctx.fill();
+                }
+            }
+
+            // Draw Patient (Teal) & Informant (Amber)
+            drawDataset(pTotals, '#2dd4bf', 'rgba(45, 212, 191, 0.25)');
+            drawDataset(iTotals, '#fbbf24', 'rgba(251, 191, 36, 0.25)');
+        }
+
+        function renderAlignmentAnalysis() {
+            const pTotals = getTotals(patientAnswers);
+            const iTotals = getTotals(informantAnswers);
+            const cardsContainer = document.getElementById('alignment-summary-cards');
+            cardsContainer.innerHTML = '';
+
+            pTotals.forEach((pVal, idx) => {
+                const iVal = iTotals[idx];
+                const diff = iVal - pVal;
+                let statusBadge = '';
+
+                if (pVal >= 6 && iVal >= 6) {
+                    statusBadge = `<span class="px-2 py-0-5 bg-emerald-500-20 text-emerald-300 border border-emerald-500-30 text-10 font-bold rounded">High Concordance</span>`;
+                } else if (diff >= 3) {
+                    statusBadge = `<span class="px-2 py-0-5 bg-amber-950-20 text-amber-300 border border-amber-500-30 text-10 font-bold rounded">Masking Alert</span>`;
+                } else if (diff <= -3) {
+                    statusBadge = `<span class="px-2 py-0-5 bg-indigo-500-20 text-indigo-300 border border-indigo-500-30 text-10 font-bold rounded">Internalized Distress</span>`;
+                } else {
+                    statusBadge = `<span class="px-2 py-0-5 bg-slate-800 text-slate-400 text-10 font-bold rounded">Moderate / Low</span>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = "p-3 bg-slate-900-60 rounded-xl border border-slate-800 space-y-1-5";
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <span class="text-10 font-bold text-slate-400 uppercase">${biotypeNames[idx]}</span>
+                        ${statusBadge}
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span>Patient: <strong class="text-teal-400">${pVal}/9</strong></span>
+                        <span>Informant: <strong class="text-amber-400">${iVal}/9</strong></span>
+                    </div>
+                `;
+                cardsContainer.appendChild(card);
+            });
+
+            const interpBox = document.getElementById('alignment-interpretation-box');
+            let hasMasking = false;
+            let hasInternalized = false;
+            let dominantIdx = 0;
+            let maxCombined = -1;
+
+            pTotals.forEach((pVal, idx) => {
+                const iVal = iTotals[idx];
+                const sum = pVal + iVal;
+                if (sum > maxCombined) {
+                    maxCombined = sum;
+                    dominantIdx = idx;
+                }
+                if (iVal - pVal >= 3) hasMasking = true;
+                if (pVal - iVal >= 3) hasInternalized = true;
+            });
+
+            if (maxCombined === 0) {
+                interpBox.innerHTML = `<p class="text-slate-400 italic">Complete the questionnaire to view automated score alignment and clinical analysis.</p>`;
+            } else {
+                let html = `<p class="text-slate-200 mb-1">Primary Neural Target: <strong class="text-teal-300">${biotypeNames[dominantIdx]}</strong> (Combined Score: ${maxCombined}/18)</p>`;
+                if (hasMasking) {
+                    html += `<p class="text-amber-300 text-11 pt-1">⚠️ <strong>Masking Pattern Detected:</strong> Informant observes significantly higher functional impairment than self-reported by patient, pointing to hidden cognitive burnout.</p>`;
+                }
+                if (hasInternalized) {
+                    html += `<p class="text-indigo-300 text-11 pt-1">🧠 <strong>Internalized Distress Detected:</strong> Patient reports higher internal alarm or rumination than observed externally by contacts.</p>`;
+                }
+                interpBox.innerHTML = html;
+            }
+        }
+
+        function updateRoadmap() {
+            const pTotals = getTotals(patientAnswers);
+            const iTotals = getTotals(informantAnswers);
+
+            document.getElementById('roadmap-date').innerText = new Date().toLocaleDateString();
+            document.getElementById('roadmap-informant-name').innerText = document.getElementById('informant-name').value || "Not Specified";
+            document.getElementById('roadmap-informant-rel').innerText = document.getElementById('informant-rel').value || "Not Specified";
+
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`score-roadmap-p${i+1}`).innerText = `${pTotals[i]}/9`;
+                document.getElementById(`score-roadmap-i${i+1}`).innerText = `${iTotals[i]}/9`;
+            }
+
+            let maxCombined = -1;
+            let dominantIdx = 0;
+            pTotals.forEach((pVal, idx) => {
+                const sum = pVal + iTotals[idx];
+                if (sum > maxCombined) {
+                    maxCombined = sum;
+                    dominantIdx = idx;
+                }
+            });
+
+            document.getElementById('roadmap-primary-biotype').innerText = maxCombined > 0 ? biotypeNames[dominantIdx] : "None Identified";
+
+            const actionContainer = document.getElementById('roadmap-action-list');
+            actionContainer.innerHTML = '';
+
+            const commitmentText = [
+                "Cognitive Dyscontrol Support: Provide single-step task guidance, simple written checklists, and minimize multi-step daily choices.",
+                "Negative Affect Support: Maintain a calm, neutral atmosphere, avoid arguing with negative interpretations, and offer grounding.",
+                "Anhedonia / Motivation Support: Offer quiet, low-demand accompaniment without pressuring for forced enthusiasm or cheerfulness.",
+                "Executive Energy Pacing: Help manage daily logistics and enforce mandatory quiet rest breaks to protect cognitive stamina."
+            ];
+
+            pTotals.forEach((pVal, idx) => {
+                if (pVal >= 3 || iTotals[idx] >= 3) {
+                    const box = document.createElement('div');
+                    box.className = "p-2-5 bg-slate-50 border border-slate-200 rounded-lg text-11";
+                    box.innerText = `✓ ${commitmentText[idx]}`;
+                    actionContainer.appendChild(box);
+                }
+            });
+
+            if (actionContainer.children.length === 0) {
+                actionContainer.innerHTML = `<p class="text-slate-400 italic">No elevated scores detected. Complete questionnaire to populate commitments.</p>`;
+            }
+        }
+
+        window.onload = function() {
+            renderGentleCards();
+            renderMatrixTable('all');
+            renderEvidenceCards();
+            renderQuestionnaire();
+            drawRadarCanvas();
+        };
+    </script>
+</body>
+</html>
